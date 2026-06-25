@@ -1,0 +1,26 @@
+# Claude Code local settings
+.claude/
+
+# Xcode user-specific state
+xcuserdata/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+
+# Xcode build output
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Working notes
+context.md
