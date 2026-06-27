@@ -30,12 +30,66 @@ enum ProtectedProcesses {
         "/Omsil.app/",
     ]
 
-    /// Returns true if the given signal to the given executable path should be denied.
-    static func shouldBlock(signal sig: Int32, executablePath path: String) -> Bool {
-        guard sig == SIGKILL || sig == SIGTERM || sig == SIGSTOP else { return false }
+    // MARK: - Code-signing identities (primary match)
+
+    // Protected processes are matched by (Team ID, signing-ID prefix) rather than
+    // executable path. The kernel computes these from the binary's signature, so
+    // they are spoof-resistant — an attacker can't claim another team's ID without
+    // that team's signing key — and stable across app updates, unlike a pinned
+    // cdhash. A renamed/moved protected binary still matches (context.md bypass
+    // #6). Values captured from the installed apps via `codesign -dv`:
+    //   Little Snitch:  MLZF7K7B5R  at.obdev.littlesnitch[.daemon/.agent/...]
+    //   Cold Turkey:    VH26F58M5A  com.getcoldturkey.blocker[, -safari-ext]
+    //   Omsil (ours):   KLZNQUF7A7  com.jasperloverude.Omsil[.OmsilExtension]
+    private static let identities: [(teamID: String, signingPrefixes: [String])] = [
+        ("KLZNQUF7A7", ["com.jasperloverude.Omsil"]),
+        ("MLZF7K7B5R", ["at.obdev.littlesnitch"]),
+        ("VH26F58M5A", ["com.getcoldturkey."]),
+    ]
+
+    /// True if the signing identity belongs to a protected vendor/product. Both
+    /// fields come straight from the kernel's view of the code signature and are
+    /// empty for unsigned/adhoc binaries, which therefore never match here.
+    private static func matchesIdentity(teamID: String, signingID: String) -> Bool {
+        guard !teamID.isEmpty else { return false }
+        return identities.contains { rule in
+            rule.teamID == teamID && rule.signingPrefixes.contains { signingID.hasPrefix($0) }
+        }
+    }
+
+    /// Legacy name/path-fragment match, retained only as a fallback for binaries
+    /// with no usable signing info. It can false-negative on a moved/renamed
+    /// binary — exactly what the identity match above fixes — but it can't reduce
+    /// protection (false positives are harmless in this threat model).
+    private static func matchesPath(executablePath path: String) -> Bool {
         let name = (path as NSString).lastPathComponent
         if names.contains(name) { return true }
         return pathFragments.contains { path.contains($0) }
+    }
+
+    /// True if the target process is protected: identity match first, path fallback.
+    private static func isProtected(teamID: String, signingID: String, executablePath path: String) -> Bool {
+        matchesIdentity(teamID: teamID, signingID: signingID) || matchesPath(executablePath: path)
+    }
+
+    /// Returns true if the given signal to the given target should be denied.
+    static func shouldBlock(signal sig: Int32, teamID: String, signingID: String, executablePath path: String) -> Bool {
+        guard sig == SIGKILL || sig == SIGTERM || sig == SIGSTOP else { return false }
+        return isProtected(teamID: teamID, signingID: signingID, executablePath: path)
+    }
+
+    // MARK: - Task-port protection
+
+    /// True if acquiring a Mach task port for the given target should be denied.
+    /// A control task port (`task_for_pid` → `AUTH_GET_TASK`) grants full
+    /// read/write/suspend over the target — enough to neutralise the guard
+    /// without ever sending it a signal it could see (context.md bypass #3). The
+    /// read-only port (`AUTH_GET_TASK_READ`, used by debuggers/profilers/crash
+    /// reporters) is denied for the same tamper reason; if that interferes with
+    /// legitimate diagnostics on the protected apps, drop the GET_TASK_READ
+    /// subscription in ESFGuard and keep only GET_TASK.
+    static func shouldBlockTaskAccess(teamID: String, signingID: String, executablePath path: String) -> Bool {
+        isProtected(teamID: teamID, signingID: signingID, executablePath: path)
     }
 
     // MARK: - Exec protection
