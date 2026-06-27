@@ -11,7 +11,7 @@ struct ContentView: View {
                 .symbolEffect(.pulse, isActive: ext.status.isTransitioning)
 
             VStack(spacing: 4) {
-                Text("Phylax")
+                Text("Omsil")
                     .font(.title.bold())
                 Text("Process Guard")
                     .font(.subheadline)
@@ -24,27 +24,28 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: 280)
 
+            // Activate-only: the guard cannot be torn down from this UI.
             Button(buttonLabel) {
-                if ext.status.isActive {
-                    ext.deactivate()
-                } else {
-                    ext.activate()
-                }
+                ext.activate()
             }
             .buttonStyle(.borderedProminent)
-            .tint(ext.status.isActive ? .red : .accentColor)
-            .disabled(ext.status.isTransitioning)
+            .disabled(ext.status.isActive || ext.status.isTransitioning)
         }
         .padding(32)
         .frame(minWidth: 360, minHeight: 300)
+        // Re-arm the guard on every launch. This is what lets the watchdog
+        // recover protection simply by relaunching the app (context.md step B).
+        .task {
+            ext.activateIfNeeded()
+        }
     }
 
     private var iconName: String {
         switch ext.status {
-        case .active:                       return "lock.shield.fill"
-        case .activating, .deactivating:    return "shield"
-        case .failed:                       return "exclamationmark.shield"
-        default:                            return "shield.slash"
+        case .active:       return "lock.shield.fill"
+        case .activating:   return "shield"
+        case .failed:       return "exclamationmark.shield"
+        default:            return "shield.slash"
         }
     }
 
@@ -52,8 +53,7 @@ struct ContentView: View {
         switch ext.status {
         case .active:      return .green
         case .failed:      return .red
-        case .activating,
-             .deactivating: return .orange
+        case .activating:  return .orange
         default:           return .secondary
         }
     }
@@ -61,8 +61,7 @@ struct ContentView: View {
     private var buttonLabel: String {
         switch ext.status {
         case .activating:   return "Activating…"
-        case .deactivating: return "Deactivating…"
-        case .active:       return "Deactivate Guard"
+        case .active:       return "Guard Active"
         default:            return "Activate Guard"
         }
     }

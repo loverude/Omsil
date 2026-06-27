@@ -1,13 +1,13 @@
 //
-//  PhylaxUITests.swift
-//  PhylaxUITests
+//  OmsilUITests.swift
+//  OmsilUITests
 //
 //  Created by Jasper Loverude on 6/24/26.
 //
 
 import XCTest
 
-final class PhylaxUITests: XCTestCase {
+final class OmsilUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

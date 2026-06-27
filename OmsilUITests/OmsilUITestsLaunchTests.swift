@@ -1,13 +1,13 @@
 //
-//  PhylaxUITestsLaunchTests.swift
-//  PhylaxUITests
+//  OmsilUITestsLaunchTests.swift
+//  OmsilUITests
 //
 //  Created by Jasper Loverude on 6/24/26.
 //
 
 import XCTest
 
-final class PhylaxUITestsLaunchTests: XCTestCase {
+final class OmsilUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

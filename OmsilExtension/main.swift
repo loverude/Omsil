@@ -1,7 +1,7 @@
 import Foundation
 import OSLog
 
-private let log = Logger(subsystem: "com.jasperloverude.Phylax.PhylaxExtension", category: "main")
+private let log = Logger(subsystem: "com.jasperloverude.Omsil.OmsilExtension", category: "main")
 
 // Strong reference lives for the entire process lifetime.
 private var esfGuard: ESFGuard?

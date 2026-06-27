@@ -12,37 +12,37 @@
 			containerPortal = F5F112162FECED7C008285D8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F5F1121D2FECED7C008285D8;
-			remoteInfo = Phylax;
+			remoteInfo = Omsil;
 		};
 		F5F112362FECED7C008285D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5F112162FECED7C008285D8 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F5F1121D2FECED7C008285D8;
-			remoteInfo = Phylax;
+			remoteInfo = Omsil;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F5F1121E2FECED7C008285D8 /* Phylax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phylax.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5F1122B2FECED7C008285D8 /* PhylaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhylaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5F112352FECED7C008285D8 /* PhylaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhylaxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F1121E2FECED7C008285D8 /* Omsil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Omsil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F1122B2FECED7C008285D8 /* OmsilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmsilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F112352FECED7C008285D8 /* OmsilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OmsilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F5F112202FECED7C008285D8 /* Phylax */ = {
+		F5F112202FECED7C008285D8 /* Omsil */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Phylax;
+			path = Omsil;
 			sourceTree = "<group>";
 		};
-		F5F1122E2FECED7C008285D8 /* PhylaxTests */ = {
+		F5F1122E2FECED7C008285D8 /* OmsilTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PhylaxTests;
+			path = OmsilTests;
 			sourceTree = "<group>";
 		};
-		F5F112382FECED7C008285D8 /* PhylaxUITests */ = {
+		F5F112382FECED7C008285D8 /* OmsilUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PhylaxUITests;
+			path = OmsilUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		F5F112152FECED7C008285D8 = {
 			isa = PBXGroup;
 			children = (
-				F5F112202FECED7C008285D8 /* Phylax */,
-				F5F1122E2FECED7C008285D8 /* PhylaxTests */,
-				F5F112382FECED7C008285D8 /* PhylaxUITests */,
+				F5F112202FECED7C008285D8 /* Omsil */,
+				F5F1122E2FECED7C008285D8 /* OmsilTests */,
+				F5F112382FECED7C008285D8 /* OmsilUITests */,
 				F5F1121F2FECED7C008285D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		F5F1121F2FECED7C008285D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5F1121E2FECED7C008285D8 /* Phylax.app */,
-				F5F1122B2FECED7C008285D8 /* PhylaxTests.xctest */,
-				F5F112352FECED7C008285D8 /* PhylaxUITests.xctest */,
+				F5F1121E2FECED7C008285D8 /* Omsil.app */,
+				F5F1122B2FECED7C008285D8 /* OmsilTests.xctest */,
+				F5F112352FECED7C008285D8 /* OmsilUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F5F1121D2FECED7C008285D8 /* Phylax */ = {
+		F5F1121D2FECED7C008285D8 /* Omsil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5F1123F2FECED7C008285D8 /* Build configuration list for PBXNativeTarget "Phylax" */;
+			buildConfigurationList = F5F1123F2FECED7C008285D8 /* Build configuration list for PBXNativeTarget "Omsil" */;
 			buildPhases = (
 				F5F1121A2FECED7C008285D8 /* Sources */,
 				F5F1121B2FECED7C008285D8 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F5F112202FECED7C008285D8 /* Phylax */,
+				F5F112202FECED7C008285D8 /* Omsil */,
 			);
-			name = Phylax;
+			name = Omsil;
 			packageProductDependencies = (
 			);
-			productName = Phylax;
-			productReference = F5F1121E2FECED7C008285D8 /* Phylax.app */;
+			productName = Omsil;
+			productReference = F5F1121E2FECED7C008285D8 /* Omsil.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F5F1122A2FECED7C008285D8 /* PhylaxTests */ = {
+		F5F1122A2FECED7C008285D8 /* OmsilTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5F112422FECED7C008285D8 /* Build configuration list for PBXNativeTarget "PhylaxTests" */;
+			buildConfigurationList = F5F112422FECED7C008285D8 /* Build configuration list for PBXNativeTarget "OmsilTests" */;
 			buildPhases = (
 				F5F112272FECED7C008285D8 /* Sources */,
 				F5F112282FECED7C008285D8 /* Frameworks */,
@@ -131,18 +131,18 @@
 				F5F1122D2FECED7C008285D8 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F5F1122E2FECED7C008285D8 /* PhylaxTests */,
+				F5F1122E2FECED7C008285D8 /* OmsilTests */,
 			);
-			name = PhylaxTests;
+			name = OmsilTests;
 			packageProductDependencies = (
 			);
-			productName = PhylaxTests;
-			productReference = F5F1122B2FECED7C008285D8 /* PhylaxTests.xctest */;
+			productName = OmsilTests;
+			productReference = F5F1122B2FECED7C008285D8 /* OmsilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F5F112342FECED7C008285D8 /* PhylaxUITests */ = {
+		F5F112342FECED7C008285D8 /* OmsilUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5F112452FECED7C008285D8 /* Build configuration list for PBXNativeTarget "PhylaxUITests" */;
+			buildConfigurationList = F5F112452FECED7C008285D8 /* Build configuration list for PBXNativeTarget "OmsilUITests" */;
 			buildPhases = (
 				F5F112312FECED7C008285D8 /* Sources */,
 				F5F112322FECED7C008285D8 /* Frameworks */,
@@ -154,13 +154,13 @@
 				F5F112372FECED7C008285D8 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F5F112382FECED7C008285D8 /* PhylaxUITests */,
+				F5F112382FECED7C008285D8 /* OmsilUITests */,
 			);
-			name = PhylaxUITests;
+			name = OmsilUITests;
 			packageProductDependencies = (
 			);
-			productName = PhylaxUITests;
-			productReference = F5F112352FECED7C008285D8 /* PhylaxUITests.xctest */;
+			productName = OmsilUITests;
+			productReference = F5F112352FECED7C008285D8 /* OmsilUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5F112192FECED7C008285D8 /* Build configuration list for PBXProject "Phylax" */;
+			buildConfigurationList = F5F112192FECED7C008285D8 /* Build configuration list for PBXProject "Omsil" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5F1121D2FECED7C008285D8 /* Phylax */,
-				F5F1122A2FECED7C008285D8 /* PhylaxTests */,
-				F5F112342FECED7C008285D8 /* PhylaxUITests */,
+				F5F1121D2FECED7C008285D8 /* Omsil */,
+				F5F1122A2FECED7C008285D8 /* OmsilTests */,
+				F5F112342FECED7C008285D8 /* OmsilUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		F5F1122D2FECED7C008285D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5F1121D2FECED7C008285D8 /* Phylax */;
+			target = F5F1121D2FECED7C008285D8 /* Omsil */;
 			targetProxy = F5F1122C2FECED7C008285D8 /* PBXContainerItemProxy */;
 		};
 		F5F112372FECED7C008285D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5F1121D2FECED7C008285D8 /* Phylax */;
+			target = F5F1121D2FECED7C008285D8 /* Omsil */;
 			targetProxy = F5F112362FECED7C008285D8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -409,7 +409,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.Phylax;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.Omsil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -441,7 +441,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.Phylax;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.Omsil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -463,14 +463,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.PhylaxTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.OmsilTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phylax.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phylax";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Omsil.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Omsil";
 			};
 			name = Debug;
 		};
@@ -484,14 +484,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 26.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.PhylaxTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.OmsilTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Phylax.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Phylax";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Omsil.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Omsil";
 			};
 			name = Release;
 		};
@@ -503,14 +503,14 @@
 				DEVELOPMENT_TEAM = KLZNQUF7A7;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.PhylaxUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.OmsilUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Phylax;
+				TEST_TARGET_NAME = Omsil;
 			};
 			name = Debug;
 		};
@@ -522,21 +522,21 @@
 				DEVELOPMENT_TEAM = KLZNQUF7A7;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.PhylaxUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jasperloverude.OmsilUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = Phylax;
+				TEST_TARGET_NAME = Omsil;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5F112192FECED7C008285D8 /* Build configuration list for PBXProject "Phylax" */ = {
+		F5F112192FECED7C008285D8 /* Build configuration list for PBXProject "Omsil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5F1123D2FECED7C008285D8 /* Debug */,
@@ -545,7 +545,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5F1123F2FECED7C008285D8 /* Build configuration list for PBXNativeTarget "Phylax" */ = {
+		F5F1123F2FECED7C008285D8 /* Build configuration list for PBXNativeTarget "Omsil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5F112402FECED7C008285D8 /* Debug */,
@@ -554,7 +554,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5F112422FECED7C008285D8 /* Build configuration list for PBXNativeTarget "PhylaxTests" */ = {
+		F5F112422FECED7C008285D8 /* Build configuration list for PBXNativeTarget "OmsilTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5F112432FECED7C008285D8 /* Debug */,
@@ -563,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5F112452FECED7C008285D8 /* Build configuration list for PBXNativeTarget "PhylaxUITests" */ = {
+		F5F112452FECED7C008285D8 /* Build configuration list for PBXNativeTarget "OmsilUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5F112462FECED7C008285D8 /* Debug */,
